@@ -66,6 +66,22 @@ header.mast { display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 20px;
 .updesc { font-size:13px; color:var(--muted); margin-top:2px; line-height:1.35; }
 .cbadge { display:inline-block; margin-left:8px; font-size:11px; font-weight:600;
   color:#3a54c4; background:rgba(120,160,255,.16); padding:1px 7px; border-radius:10px; vertical-align:1px; }
+.wkrow { display:flex; align-items:flex-start; gap:12px; padding:11px 0; border-bottom:1px solid var(--line); }
+.wkrow:last-child { border-bottom:none; }
+.wkrow.wk-rest { opacity:.6; }
+.wkrow.wk-today { background:rgba(255,103,0,.05); margin:0 -12px; padding-left:12px; padding-right:12px; border-radius:8px; }
+.wkdate { flex:0 0 76px; display:flex; flex-direction:column; line-height:1.15; }
+.wkdow { font-weight:700; font-size:14px; }
+.wkmd { font-size:12px; color:var(--muted); }
+.wkdot { flex:0 0 10px; width:10px; height:10px; border-radius:50%; margin-top:5px; }
+.wkbody { flex:1 1 auto; min-width:0; }
+.wktitle { font-size:14px; font-weight:600; }
+.wkdesc { font-size:13px; color:var(--muted); margin-top:3px; line-height:1.4; }
+.wchip { display:inline-block; margin-left:8px; font-size:11px; font-weight:600;
+  padding:1px 7px; border-radius:10px; vertical-align:1px; }
+.wchip-pm { color:#9a5b00; background:rgba(255,103,0,.13); }
+.wchip-no { color:#a3282a; background:rgba(226,75,74,.14); }
+.wchip-done { color:#1B6B2A; background:rgba(27,107,42,.13); }
 .tiles { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
 @media(min-width:520px) { .tiles { grid-template-columns:repeat(4,1fr); } }
 .tile { background:var(--tile); border-radius:12px; padding:12px 14px; }
@@ -196,11 +212,11 @@ footer { margin-top:44px; color:var(--muted); font-size:13px;
   </div>
 </div>
 
-<div class="eyebrow">Upcoming workouts</div>
-<div class="card"><div class="uprow up-rest"><div class="upwhen">Today</div><div class="upbody"><div class="uptitle">Rest</div><div class="updesc">Full rest or gentle stretching/yoga.</div></div></div><div class="uprow up-rest"><div class="upwhen">Tomorrow</div><div class="upbody"><div class="uptitle">Rest</div><div class="updesc">Full rest or gentle stretching/yoga. Teaching day.</div></div></div><div class="uprow up-rest"><div class="upwhen">Wed Sep 2</div><div class="upbody"><div class="uptitle">Rest</div><div class="updesc">Full rest or gentle stretching/yoga.</div></div></div><div class="uprow "><div class="upwhen">Thu Sep 3</div><div class="upbody"><div class="uptitle">Easy · 2 mi</div><div class="updesc">Z2: 146-154 bpm</div></div></div><div class="uprow up-rest"><div class="upwhen">Fri Sep 4</div><div class="upbody"><div class="uptitle">Rest</div><div class="updesc">Full rest or gentle stretching/yoga.</div></div></div><div class="uprow "><div class="upwhen">Sat Sep 5</div><div class="upbody"><div class="uptitle">Long Run · 4 mi</div><div class="updesc">Z2: 146-154 bpm</div></div></div><div class="uprow "><div class="upwhen">Sun Sep 6</div><div class="upbody"><div class="uptitle">Tempo · 3 mi</div><div class="updesc">MAGIC MILE TEST</div></div></div><div class="uprow up-rest"><div class="upwhen">Mon Sep 7</div><div class="upbody"><div class="uptitle">Rest</div><div class="updesc">Full rest or gentle stretching/yoga.</div></div></div><div class="uprow "><div class="upwhen">Tue Sep 8</div><div class="upbody"><div class="uptitle">Easy · 2.5 mi</div><div class="updesc">Z2: 146-154 bpm</div></div></div><div class="uprow up-rest"><div class="upwhen">Wed Sep 9</div><div class="upbody"><div class="uptitle">Rest</div><div class="updesc">Full rest or gentle stretching/yoga.</div></div></div></div>
-
 <div class="eyebrow">This week &amp; baselines</div>
 <div class="tiles"><div class="tile"><div class="tlab">Last 7 days</div><div class="tval">5.4</div><div class="tsub">miles run</div></div><div class="tile"><div class="tlab">Weight</div><div class="tval">52.6kg</div><div class="tsub">116 lb · Aug 26</div></div><div class="tile"><div class="tlab">Sleep, 30-night avg</div><div class="tval">7.6h</div><div class="tsub">score 84</div></div><div class="tile"><div class="tlab">Resting HR</div><div class="tval">128</div><div class="tsub">bpm (Garmin)</div></div></div>
+
+<div class="eyebrow">Next 7 days — detail</div>
+<div class="card"><div class="wkrow wk-rest wk-today"><div class="wkdate"><span class="wkdow">Today</span><span class="wkmd">Aug 31</span></div><div class="wkdot" style="background:#B8B8B8"></div><div class="wkbody"><div class="wktitle">Rest<span class="wchip wchip-pm">🕑 PM only · free after ~17:55</span></div><div class="wkdesc">Full rest or gentle stretching/yoga.</div></div></div><div class="wkrow wk-rest"><div class="wkdate"><span class="wkdow">Tomorrow</span><span class="wkmd">Sep 1</span></div><div class="wkdot" style="background:#B8B8B8"></div><div class="wkbody"><div class="wktitle">Rest<span class="wchip wchip-pm">🕑 PM only · free after ~14:45</span></div><div class="wkdesc">Full rest or gentle stretching/yoga. Teaching day.</div></div></div><div class="wkrow wk-rest"><div class="wkdate"><span class="wkdow">Wed</span><span class="wkmd">Sep 2</span></div><div class="wkdot" style="background:#B8B8B8"></div><div class="wkbody"><div class="wktitle">Rest<span class="wchip wchip-pm">🕑 PM only · free after ~16:20</span></div><div class="wkdesc">Full rest or gentle stretching/yoga.</div></div></div><div class="wkrow"><div class="wkdate"><span class="wkdow">Thu</span><span class="wkmd">Sep 3</span></div><div class="wkdot" style="background:#6B717E"></div><div class="wkbody"><div class="wktitle">Easy · 2 mi<span class="wchip wchip-pm">🕑 PM only · free after ~14:45</span></div><div class="wkdesc">Z2: 146-154 bpm</div></div></div><div class="wkrow wk-rest"><div class="wkdate"><span class="wkdow">Fri</span><span class="wkmd">Sep 4</span></div><div class="wkdot" style="background:#B8B8B8"></div><div class="wkbody"><div class="wktitle">Rest<span class="wchip wchip-pm">🕑 PM only · free after ~16:20</span></div><div class="wkdesc">Full rest or gentle stretching/yoga.</div></div></div><div class="wkrow"><div class="wkdate"><span class="wkdow">Sat</span><span class="wkmd">Sep 5</span></div><div class="wkdot" style="background:#FF6700"></div><div class="wkbody"><div class="wktitle">Long Run · 4 mi</div><div class="wkdesc">Z2: 146-154 bpm</div></div></div><div class="wkrow"><div class="wkdate"><span class="wkdow">Sun</span><span class="wkmd">Sep 6</span></div><div class="wkdot" style="background:#004E98"></div><div class="wkbody"><div class="wktitle">Tempo · 3 mi</div><div class="wkdesc">MAGIC MILE TEST</div></div></div></div>
 
 <div class="eyebrow">The build — 15 weeks to Victoria Park</div>
 <div class="card">
@@ -252,7 +268,7 @@ footer { margin-top:44px; color:var(--muted); font-size:13px;
 </div>
 
 <footer>
-  Generated 2026-08-31 08:01 ·
+  Generated 2026-08-31 09:08 ·
   data: Garmin + Oura + training_data.json ·
   regenerate with <code>uv run python dashboard.py</code>
 </footer>
